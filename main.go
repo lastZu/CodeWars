@@ -1,12 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
-	// DigitalRoot
-	fmt.Println(FormatDuration(5))
-	fmt.Println(FormatDuration(15))
-	fmt.Println(FormatDuration(111111))
-	fmt.Println(FormatDuration(3603))
-	fmt.Println(FormatDuration(3601))
+
+	for i := 4; i > 0; i-- {
+		rand.Seed(time.Now().UnixNano())
+		num := rand.Intn(i) + 1
+		fmt.Println(num)
+	}
+
 }
